@@ -1,0 +1,68 @@
+/**
+Given an unsorted array of integers(negative + positive), WAP to find a continuous subarray which adds to a given number.
+
+
+
+Method: Prefix sum: The idea is to store the sum of elements of every prefix of the array in a hashmap, i.e for every index store the sum of elements upto that index hashmap. So to check if there is a subarray with sum equal to s, check for every index i, and sum upto that index as x. If there is a prefix with sum equal to x – s, then the subarray with given sum is found.
+
+**/
+
+
+
+#include<bits/stdc++.h> 
+using namespace std; 
+  
+// Function to print subarray with sum as given sum 
+void subArraySum(int arr[], int n, int sum) 
+{ 
+    // create an empty map 
+    unordered_map<int, int> map; 
+  
+    // Maintains sum of elements so far 
+    int curr_sum = 0; 
+  
+    for (int i = 0; i < n; i++) 
+    { 
+        // add current element to curr_sum 
+        curr_sum = curr_sum + arr[i]; 
+  
+        // if curr_sum is equal to target sum 
+        // we found a subarray starting from index 0 
+        // and ending at index i 
+        if (curr_sum == sum) 
+        { 
+            cout << "Sum found between indexes "
+                 << 0 << " to " << i << endl; 
+            return; 
+        } 
+  
+        // If curr_sum - sum already exists in map 
+        // we have found a subarray with target sum 
+        if (map.find(curr_sum - sum) != map.end()) 
+        { 
+            cout << "Sum found between indexes "
+                 << map[curr_sum - sum] + 1 
+                 << " to " << i << endl; 
+            return; 
+        } 
+  
+        map[curr_sum] = i; 
+    } 
+  
+    // If we reach here, then no subarray exists 
+    cout << "No subarray with given sum exists"; 
+} 
+  
+// Driver program to test above function 
+int main() 
+{ 
+    int arr[] = {10, 2, -2, -20, 10}; 
+    int n = sizeof(arr)/sizeof(arr[0]); 
+    int sum = -10; 
+  
+    subArraySum(arr, n, sum); 
+  
+    return 0; 
+} 
+
+// time complexity: O(N), auxiliary space complexity O(N)
