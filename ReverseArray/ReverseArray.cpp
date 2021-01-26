@@ -1,7 +1,5 @@
-/**
-*Write a program to reverse an array
+//Write a program to reverse an array
 
-**/
 #include <bits/stdc++.h>
 using namespace std;
  
