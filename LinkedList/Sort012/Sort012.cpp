@@ -50,8 +50,7 @@ Node* sortList(Node* head)
     }
  
     // Attach three lists
-    zero->next = (oneD->next) 
-? (oneD->next) : (twoD->next);
+    zero->next = (oneD->next) ? (oneD->next) : (twoD->next);
     one->next = twoD->next;
     two->next = NULL;
  
