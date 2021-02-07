@@ -32,7 +32,8 @@ Space Complexity: O(K)
 struct node *reverse (struct node *head, int k)
 { 
     node * cur = head, *prev = NULL, *next = NULL;
-    while(cur!=NULL && k--) {
+    int count = k;
+    while(cur!=NULL && count--) {
         next = cur -> next;
         cur -> next = prev;
         prev = cur;
