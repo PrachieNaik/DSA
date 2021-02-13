@@ -58,9 +58,9 @@ bool isSubsetSum(int set[], int n, int sum)
         for (int j = 1; j <= sum; j++) {
             if (j < set[i - 1])
                 subset[i][j] = subset[i - 1][j];
-            if (j >= set[i - 1])
-                subset[i][j] = subset[i - 1][j]
-                               || subset[i - 1][j - set[i - 1]];
+            else {
+                subset[i][j] = subset[i - 1][j] || subset[i - 1][j - set[i - 1]];
+            }
         }
     }
  
