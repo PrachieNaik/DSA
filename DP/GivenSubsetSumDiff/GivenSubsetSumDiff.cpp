@@ -53,9 +53,8 @@ int countSubsetSum(int set[], int n, int sum)
     return subset[n][sum];
 }
 
-int minDiffernce(int arr[], int n) { 
+int minDiffernce(int arr[], int n, int diff) { 
     int sum = 0;
-    int diff = 1;
     for(int i = 0; i < n; i++) {
         sum += arr[i];
     }
