@@ -13,6 +13,7 @@ Constraints:
 
 Approch: Reverse the given string and store it in another string. Apply lcs on both of these strings. We will get the maximum possible length of palindromic sequence present in the string. We will get the required number of deletion by subtracting this value from length of string.
 
+Node: This problem can also be asked as minimum number of insertion, the answer or code will not change
 */
 
 #include <bits/stdc++.h>
