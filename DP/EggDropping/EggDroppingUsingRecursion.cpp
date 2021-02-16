@@ -28,12 +28,11 @@ Auxiliary Space :O(1). As there was no use of any data structure for storing val
 */
 int eggDrop(int eggs, int floors) 
 {
-    // your code here
     if(floors == 1 || floors == 0)
-    return k;
+    return floors;
     
     if(eggs == 1)
-    return k;
+    return floors;
     
     int ans = INT_MAX;
     for(int i = 1;i <= floors;i++) {
