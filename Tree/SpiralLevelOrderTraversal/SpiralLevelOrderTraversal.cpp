@@ -2,17 +2,15 @@
 
 Problem statement: Write a function to print spiral level order traversal of a tree. 
 
-Approaches: 
+Approach: The idea is to keep on entering nodes like normal level order traversal, but during printing, in alternative turns push them onto the stack and print them,
+and in other traversals, just print them the way they are present in the queue.
 
-    Method 1: The idea is to keep on entering nodes like normal level order traversal, but during printing, in alternative turns push them onto the stack and print them, and in other traversals, just print them the way they are present in the queue.
-
-	  Time Complexity : O(n)
-    Auxiliary Space : O(n)
+Time Complexity : O(n)
+Auxiliary Space : O(n)
 
 */
 
-/* Function to print a tree in spiral form  
-   using one stack */
+/* Function to print a tree in spiral form using one stack */
 void printSpiralUsingOneStack(Node* root) 
 { 
     if (root == NULL) 
@@ -30,8 +28,7 @@ void printSpiralUsingOneStack(Node* root)
             Node* p = q.front(); 
             q.pop(); 
   
-            // if reverse is true, push node's  
-            // data onto the stack, else print it 
+            // if reverse is true, push node's data onto the stack, else print it 
             if (reverse) 
                 s.push(p->data); 
             else
@@ -44,8 +41,7 @@ void printSpiralUsingOneStack(Node* root)
             size--; 
         } 
   
-        // print nodes from the stack if  
-        // reverse is true 
+        // print nodes from the stack if reverse is true 
         if (reverse) { 
             while (!s.empty()) { 
                 cout << s.top() << " "; 
@@ -53,9 +49,7 @@ void printSpiralUsingOneStack(Node* root)
             } 
         } 
   
-        // the next row has to be printed as  
-        // it is, hence change the value of  
-        // reverse 
+        // the next row has to be printed as it is, hence change the value of reverse 
         reverse = !reverse; 
     } 
 } 
