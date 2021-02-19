@@ -22,13 +22,13 @@ minimum and maximum elements in it, i.e. it takes constant time to find the maxi
 
     Algorithm: 
 
-    Pick first k elements and create a max heap of size k.
-    Perform heapify and print the root element.
-    Store the next and last element from the array
-    Run a loop from k – 1 to n 
-    Replace the value of element which is got out of the window with new element which came inside the window.
-    Perform heapify.
-    Print the root of the Heap.
+    1. Pick first k elements and create a max heap of size k.
+    2. Perform heapify and print the root element.
+    3. Store the next and last element from the array
+    4. Run a loop from k – 1 to n 
+       a. Replace the value of element which is got out of the window with new element which came inside the window.
+       b. Perform heapify.
+       c. Print the root of the Heap.
     
     Complexity Analysis: 
 
@@ -45,17 +45,17 @@ and maintain Qi to contain useful elements of current window and these useful el
 largest and element at rear/back of Qi is the smallest of current window.
 
     Algorithm: 
-    Create a deque to store k elements.
-    Run a loop and insert first k elements in the deque. Before inserting the element, check if the element at the back of the queue is smaller than the current 
-    element , if it is so remove the element from the back of the deque, until all elements left in the deque are greater than the current element. 
-    Then insert the current element, at the back of the deque.
-    Now, run a loop from k to end of the array.
-    Print the front element of the deque.
-    Remove the element from the front of the queue if they are out of the current window.
-    Insert the next element in the deque. Before inserting the element, check if the element at the back of the queue is smaller than the current element , 
-    if it is so remove the element from the back of the deque, until all elements left in the deque are greater than the current element. 
-    Then insert the current element, at the back of the deque.
-    Print the maximum element of the last window.
+    1. Create a deque to store k elements.
+    2. Run a loop and insert first k elements in the deque. Before inserting the element, check if the element at the back of the queue is smaller than the current 
+        element , if it is so remove the element from the back of the deque, until all elements left in the deque are greater than the current element. 
+        Then insert the current element, at the back of the deque.
+    3. Now, run a loop from k to end of the array.
+    4. Print the front element of the deque.
+    5. Remove the element from the front of the queue if they are out of the current window.
+    6. Insert the next element in the deque. Before inserting the element, check if the element at the back of the queue is smaller than the current element , 
+        if it is so remove the element from the back of the deque, until all elements left in the deque are greater than the current element. 
+        Then insert the current element, at the back of the deque.
+    7. Print the maximum element of the last window.
 
     Complexity Analysis: 
     
