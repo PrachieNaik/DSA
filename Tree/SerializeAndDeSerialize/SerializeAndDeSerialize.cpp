@@ -65,8 +65,8 @@ Node* deSerializeUtil(Node *root,vector<int> &ans,int &index) {
 /*this function deserializes the serialized vector A*/
 Node * deSerialize(vector<int> &A)
 {
-   Node* root = NULL;
-   int index = 0;
-   root = deSerializeUtil(root, A,index);
-   return root;
+    Node* root = NULL;
+    int index = 0;
+    root = deSerializeUtil(root, A,index);
+    return root;
 }
