@@ -10,6 +10,18 @@ Method 1 (Use function to print a given level)
     There are basically two functions in this method. One is to print all nodes at a given level (printGivenLevel), and other is to print level order traversal 
     of the tree (printLevelorder). printLevelorder makes use of printGivenLevel to print nodes at all levels one by one starting from root.
 
+    Function to print level order traversal of tree :printLevelorder(tree)
+		for d = 1 to height(tree)
+		printGivenLevel(tree, d);
+	
+	Function to print all nodes at a given level :printGivenLevel(tree, level)
+		if tree is NULL then return;
+		if level is 1, then
+			print(tree->data);
+		else if level greater than 1, then
+			printGivenLevel(tree->left, level-1);
+			printGivenLevel(tree->right, level-1);
+	
     Time Complexity: O(n^2) in worst case. For a skewed tree, printGivenLevel() takes O(n) time where n is the number of nodes in the skewed tree. So time 
     complexity of printLevelOrder() is O(n) + O(n-1) + O(n-2) + .. + O(1) which is O(n^2). 
     Space Complexity: O(n) in worst case. For a skewed tree, printGivenLevel() uses O(n) space for call stack. For a Balanced tree, 
@@ -34,8 +46,7 @@ Method 2 (Using queue)
 
 */
 
-/* C++ program to print level 
-	order traversal using STL */
+/* C++ program to print level order traversal using STL */
 #include <bits/stdc++.h>
 using namespace std;
 
