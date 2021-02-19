@@ -1,10 +1,10 @@
 /*
 
-Problem statement: Given an input stream of A of n characters consisting only of lower case alphabets. The task is to find the first non repeating character, each time a character is inserted to the stream. If there is no such character then append '#' to the answer.
+Problem statement: Given an input stream of A of n characters consisting only of lower case alphabets. The task is to find the first non repeating character, 
+each time a character is inserted to the stream. If there is no such character then append '#' to the answer.
 
-Approaches:
-
-Method 1: Create a count array of size 26(assuming only lower case characters are present) and initialize it with zero.
+Approach:
+Create a count array of size 26(assuming only lower case characters are present) and initialize it with zero.
 Create a queue of char datatype.
 Store each character in queue and increase its frequency in the hash array.
 For every character of stream, we check front of the queue.
@@ -17,8 +17,7 @@ Space Complexity: O(N)
 
 */
 
-// function to find first non repeating 
-// character of sa stream 
+// function to find first non repeating character of a stream 
 void firstnonrepeating(char str[]) 
 { 
     queue<char> q; 
