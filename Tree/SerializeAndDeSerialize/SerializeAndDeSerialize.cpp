@@ -1,13 +1,13 @@
 /*
 
-Problem statement: The task is to complete two function serialize which takes the root node of the tree as input andstores the tree into an array and deSerialize which deserializes the array to the original tree and returns the root of it.
+Problem statement: The task is to complete two function serialize which takes the root node of the tree as input and stores the tree into an array and deSerialize 
+which deserializes the array to the original tree and returns the root of it.
 
 Constraints:
 1 <= Number of nodes <= 1000
 1 <= Data of a node <= 1000
 
-Example:
-    Let the marker for NULL pointers be '-1'
+Example: Let the marker for NULL pointers be '-1'
     
     Input:
              20
