@@ -79,14 +79,11 @@ void printKMax(int arr[], int n, int k)
     int i;
     for (i = 0; i < k; ++i) 
     {
-     
         // For every element, the previous smaller elements are useless so remove them from Qi
-        while ((!Qi.empty()) && arr[i] >= 
-                            arr[Qi.back()])
-           
-             // Remove from rear
+        while ((!Qi.empty()) && arr[i] >= arr[Qi.back()]) {
+            // Remove from rear
             Qi.pop_back();
- 
+        }
         // Add new element at rear of queue
         Qi.push_back(i);
     }
@@ -99,16 +96,14 @@ void printKMax(int arr[], int n, int k)
         cout << arr[Qi.front()] << " ";
  
         // Remove the elements which are out of this window
-        while ((!Qi.empty()) && Qi.front() <= i - k)
-           
+        while ((!Qi.empty()) && Qi.front() <= i - k) {
             // Remove from front of queue
             Qi.pop_front(); 
- 
+        }
         // Remove all elements smaller than the currently being added element (remove useless elements)
-        while ((!Qi.empty()) && arr[i] >= 
-                             arr[Qi.back()])
+        while ((!Qi.empty()) && arr[i] >= arr[Qi.back()]) {
             Qi.pop_back();
- 
+        }
         // Add current element at the rear of Qi
         Qi.push_back(i);
     }
