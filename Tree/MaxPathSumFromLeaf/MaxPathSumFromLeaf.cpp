@@ -5,7 +5,7 @@ Problem statement: Given a binary tree in which each node element contains a num
 Constraints:
 1 ≤ N ≤ 10^4
 
-Approach: 
+Approaches: 
 
 Method 1: A simple solution is to traverse the tree and do following for every traversed node X. 
     1) Find maximum sum from leaf to root in left subtree of X 
@@ -15,11 +15,11 @@ Method 1: A simple solution is to traverse the tree and do following for every t
     
     Time complexity: O(n^2)
     
-Method 2:
-    We can find the maximum sum using single traversal of binary tree. The idea is to maintain two values in recursive calls 
+Method 2: We can find the maximum sum using single traversal of binary tree. The idea is to maintain two values in recursive calls 
     1) Maximum root to leaf path sum for the subtree rooted under current node. 
     2) The maximum path sum between leaves (desired output).
-    For every visited node X, we find the maximum root to leaf sum in left and right subtrees of X. We add the two values with X->data, and compare the sum with maximum path sum found so far.
+    For every visited node X, we find the maximum root to leaf sum in left and right subtrees of X. We add the two values with X->data, and compare the sum with 
+    maximum path sum found so far.
     
     Time Complexity: O(n)
 
