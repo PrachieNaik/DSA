@@ -11,7 +11,9 @@ Approach: For each node there can be four ways that the max path goes through th
     3. Max path through Right Child + Node
     4. Max path through Left Child + Node + Max path through Right Child
     
-    The idea is to keep trace of four paths and pick up the max one in the end. An important thing to note is, root of every subtree need to return maximum path sum such that at most one child of root is involved. This is needed for parent function call. In below code, this sum is stored in ‘max_single’ and returned by the recursive function.
+    The idea is to keep trace of four paths and pick up the max one in the end. An important thing to note is, root of every subtree need to return maximum path 
+    sum such that at most one child of root is involved. This is needed for parent function call. In below code, this sum is stored in ‘max_single’ and returned 
+    by the recursive function.
     
     Time Complexity: O(n)
 
@@ -36,13 +38,9 @@ int findMaxSumUtil(Node* root, int &ans) {
     return max_single;
 }
 
-// This function should returns sum of
-// maximum sum path from any node in
-// a tree rooted with given root.
-
+// This function should returns sum of maximum sum path from any node in a tree rooted with given root.
 int findMaxSum(Node* root)
 {
-    // Your code goes here
     int ans = INT_MIN;
     findMaxSumUtil(root,ans);
     return ans;
