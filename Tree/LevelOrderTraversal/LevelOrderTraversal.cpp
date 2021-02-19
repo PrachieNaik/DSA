@@ -7,10 +7,13 @@ Approaches:
 Method 1 (Use function to print a given level)
 
     Algorithm: 
-    There are basically two functions in this method. One is to print all nodes at a given level (printGivenLevel), and other is to print level order traversal of the tree (printLevelorder). printLevelorder makes use of printGivenLevel to print nodes at all levels one by one starting from root.
+    There are basically two functions in this method. One is to print all nodes at a given level (printGivenLevel), and other is to print level order traversal 
+    of the tree (printLevelorder). printLevelorder makes use of printGivenLevel to print nodes at all levels one by one starting from root.
 
-    Time Complexity: O(n^2) in worst case. For a skewed tree, printGivenLevel() takes O(n) time where n is the number of nodes in the skewed tree. So time complexity of printLevelOrder() is O(n) + O(n-1) + O(n-2) + .. + O(1) which is O(n^2). 
-    Space Complexity: O(n) in worst case. For a skewed tree, printGivenLevel() uses O(n) space for call stack. For a Balanced tree, call stack uses O(log n) space, (i.e., height of the balanced tree). 
+    Time Complexity: O(n^2) in worst case. For a skewed tree, printGivenLevel() takes O(n) time where n is the number of nodes in the skewed tree. So time 
+    complexity of printLevelOrder() is O(n) + O(n-1) + O(n-2) + .. + O(1) which is O(n^2). 
+    Space Complexity: O(n) in worst case. For a skewed tree, printGivenLevel() uses O(n) space for call stack. For a Balanced tree, 
+    call stack uses O(log n) space, (i.e., height of the balanced tree). 
 
 Method 2 (Using queue)
 
@@ -84,7 +87,6 @@ Node* newNode(int data)
 // Driver program to test above functions
 int main()
 {
-	// Let us create binary tree shown in above diagram
 	Node *root = newNode(1);
 	root->left = newNode(2);
 	root->right = newNode(3);
