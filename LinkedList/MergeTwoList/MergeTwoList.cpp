@@ -15,7 +15,8 @@ Method 1:
     Find the smaller node among the two head nodes. The current element will be the smaller node among two head nodes.
     The rest elements of both lists will appear after that.
     Now run a recursive function with parameters, the next node of the smaller element and the other head.
-    The recursive function will return the next smaller element linked with rest of the sorted element. Now point the next of current element to that, i.e curr_ele->next=recursivefunction()
+    The recursive function will return the next smaller element linked with rest of the sorted element. Now point the next of current element to that, 
+        i.e curr_ele->next=recursivefunction()
     Handle some corner cases.
     If both the heads are NULL return null.
     If one head is null return the other.
@@ -30,7 +31,8 @@ Method 2:
     This approach is very similar to the above recursive approach.
 
     Traverse the list from start to end.
-    If the head node of second list lies in between two node of the first list, insert it there and make the next node of second list as the head. Continue this until there is no node left in both lists, i.e. both the lists are traversed.
+    If the head node of second list lies in between two node of the first list, insert it there and make the next node of second list as the head. Continue this 
+        until there is no node left in both lists, i.e. both the lists are traversed.
     If the first list has reached end while traversing, point the next node to the head of second list.
     Note: Compare both the lists where the list with smaller head value is the first list.
     
@@ -44,8 +46,7 @@ Method 2:
 // Merges two lists with headers as h1 and h2. 
 // It assumes that h1's data is smaller than 
 // or equal to h2's data. 
-struct Node* mergeUtil(struct Node* h1, 
-                       struct Node* h2) 
+struct Node* mergeUtil(struct Node* h1, struct Node* h2) 
 { 
     // if only one node in first list 
     // simply point its head to second list 
@@ -92,8 +93,7 @@ struct Node* mergeUtil(struct Node* h1,
   
 // Merges two given lists in-place. This function 
 // mainly compares head nodes and calls mergeUtil() 
-struct Node* merge(struct Node* h1, 
-                   struct Node* h2) 
+struct Node* merge(struct Node* h1, struct Node* h2) 
 { 
     if (!h1) 
         return h2; 
