@@ -1,16 +1,19 @@
 /*
 
-Problem statement: Given an array, print the Next Greater Element (NGE) for every element. The Next greater Element for an element x is the first greater element on the right side of x in the array. Elements for which no greater element exist, consider next greater element as -1. 
+Problem statement: Given an array, print the Next Greater Element (NGE) for every element. The Next greater Element for an element x is the first greater element 
+on the right side of x in the array. Elements for which no greater element exist, consider next greater element as -1. 
 
 Approaches:
 
-Method 1: Use two loops: The outer loop picks all the elements one by one. The inner loop looks for the first greater element for the element picked by the outer loop. If a greater element is found then that element is printed as next, otherwise -1 is printed.
+Method 1: Use two loops: The outer loop picks all the elements one by one. The inner loop looks for the first greater element for the element picked by the outer 
+    loop. If a greater element is found then that element is printed as next, otherwise -1 is printed.
 
     Complexity Analysis:  
- 
     Time Complexity: O(n^2).
+    Space Complexity: O(1).
     
-Method 2: Traverse the array in reverse order, while current element is greater then top element on auxillary stack, keep removing the elements from stack. If stack is empty, there is no greater element, if not, top element is greater. At last, push current element to stack.
+Method 2: Traverse the array in reverse order, while current element is greater then top element on auxillary stack, keep removing the elements from stack. 
+    If stack is empty, there is no greater element, if not, top element is greater. At last, push current element to stack.
 
     Complexity Analysis:  
 
