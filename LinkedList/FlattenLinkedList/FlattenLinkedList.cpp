@@ -12,7 +12,8 @@ Constraints: 0 <= N <= 50
 1 <= Element of linked list <= 10^3
 
 Approach:
-Consider last two nodes in horizontal list. Now, problem boiles down to merging this two lists. Merge these two lists using merge function of merge sort. Now merge third list from last with the resultant list. Do this recursively and we will get the result.
+Consider last two nodes in horizontal list. Now, problem boiles down to merging this two lists. Merge these two lists using merge function of merge sort. Now merge
+third list from last with the resultant list. Do this recursively and we will get the result.
 
 */
 
@@ -36,8 +37,7 @@ Node * merge(Node *a, Node *b) {
     result -> next = NULL;
     return result;
 }
-/*  Function which returns the  root of 
-    the flattened linked list. */
+/*  Function which returns the root of the flattened linked list. */
 Node *flatten(Node *root)
 {
     if(root == NULL || root->next == NULL)
