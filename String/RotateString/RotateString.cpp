@@ -28,29 +28,26 @@ string rotate(string s,int d)
 }
 
 int main() {
-	//code
 	int t;
 	cin>>t;
 	while(t--)
 	{
-	    int flag=0;
-	    string string1, string2;
-	    cin >> string1 >> string2;
-	    int places;
-	    cin >> places;
-	    
-	    string1 = rotate(string1,places);        //for anti clockwise rotation
-	    
-      if(string1 == string2) {
-          flag=1;
-      }
-      else {
-          string1 = rotate(string1, string1.length() - (places * 2));     //for clockwise rotation (*2 since string is already rotated once)
-          if(string1 == string2) {
-              flag=1;
-          }
+	        int flag=0;
+	        string string1, string2;
+	        cin >> string1 >> string2;
+	        int places;
+	        cin >> places;
 
-      }
+	        string1 = rotate(string1,places);        //for anti clockwise rotation
+
+		if(string1 == string2) {
+		  flag=1;
+		}
+		else {
+		  string1 = rotate(string1, string1.length() - (places * 2));     //for clockwise rotation (*2 since string is already rotated once)
+		  if(string1 == string2)
+		      flag=1;
+		}
 	    cout<<flag<<endl;
 	}
 	return 0;
