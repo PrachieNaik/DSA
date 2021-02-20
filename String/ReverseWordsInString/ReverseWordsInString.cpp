@@ -9,8 +9,6 @@ Time Complexity: O(n), Space Complexity: O(1)
 
 */
 
-
-
 using namespace std;
 int main()
  {
@@ -28,12 +26,9 @@ int main()
 	    {
 	        if(s[i]=='.')
 	        {
-	           
 	           reverse(s.begin()+prev,s.begin()+i);
 	            prev=i+1;
-	            
-	        }
-	        
+	        } 
 	    }
 	    reverse(s.begin()+prev,s.end());
 	    cout<<s<<endl;
