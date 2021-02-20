@@ -1,12 +1,12 @@
 /*
 
-Problem statement: Given an array arr[ ] of size N having distinct elements, the task is to find the next greater element for each element of the array in order of their appearance in the array.
-Next greater element of an element in the array is the nearest element on the right which is greater than the current element.
-If there does not exist next greater of current element, then next greater element for current element is -1.
+Problem statement: We are given a stack data structure with push and pop operations, the task is to implement a queue using instances of stack data structure and 
+operations on them.
 
 Approaches:
 
-Method 1: (By making enQueue operation costly) This method makes sure that oldest entered element is always at the top of stack 1, so that deQueue operation just pops from stack1. To put the element at top of stack1, stack2 is used.
+Method 1: (By making enQueue operation costly) This method makes sure that oldest entered element is always at the top of stack 1, so that deQueue operation just 
+pops from stack1. To put the element at top of stack1, stack2 is used.
 
     enQueue(q, x):
     While stack1 is not empty, push everything from stack1 to stack2.
@@ -28,7 +28,8 @@ Method 1: (By making enQueue operation costly) This method makes sure that oldes
     Auxiliary Space: O(N).
     Use of stack for storing values.
 
-Method 2 (By making deQueue operation costly)In this method, in en-queue operation, the new element is entered at the top of stack1. In de-queue operation, if stack2 is empty then all the elements are moved to stack2 and finally top of stack2 is returned.
+Method 2 (By making deQueue operation costly)In this method, in en-queue operation, the new element is entered at the top of stack1. In de-queue operation, 
+if stack2 is empty then all the elements are moved to stack2 and finally top of stack2 is returned.
 
     enQueue(q,  x)
       1) Push x to stack1 (assuming size of stacks is unlimited).
@@ -60,14 +61,12 @@ public:
 /* The method push to push element into the queue */
 void StackQueue :: push(int x)
  {
-        // Your Code
         s1.push(x);
  }
 
 /*The method pop which return the element poped out of the queue*/
 int StackQueue :: pop()
-{
-        // Your Code   
+{ 
         while(!s1.empty()) {
             s2.push(s1.top());
             s1.pop();
