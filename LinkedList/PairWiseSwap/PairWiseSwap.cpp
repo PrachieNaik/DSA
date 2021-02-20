@@ -27,22 +27,22 @@ Optimized: If data contains many fields, there will be many swap operations. So 
 
 Node* pairWiseSwap(struct Node* head) {
     // The task is to complete this method
-    Node * first = head;
-    Node * second = head->next;
-    if(first==NULL || second == NULL)
-    return first;
-    head = second;
-    while(first != NULL && second != NULL) {
-        Node * temp = second ->next;
-        second -> next = first;
-        if(temp == NULL || temp -> next == NULL)
-         {
-             first -> next = temp;
-             return head;
-         }
-         first -> next = temp -> next;
-         first = temp;
-         second = temp-> next;
-    }
-    return head;
+	Node * first = head;
+	Node * second = head->next;
+	if(first==NULL || second == NULL)
+		return first;
+	head = second;
+	while(first != NULL && second != NULL) {
+		Node * temp = second ->next;
+		second -> next = first;
+		if(temp == NULL || temp -> next == NULL)
+		{
+		     first -> next = temp;
+		     return head;
+		}
+		first -> next = temp -> next;
+		first = temp;
+		second = temp-> next;
+	}
+	return head;
 }
