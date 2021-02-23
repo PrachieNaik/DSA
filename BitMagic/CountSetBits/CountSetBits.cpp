@@ -2,19 +2,6 @@
 
 Problem statement: Count set bits in an integer. 
 
-Input:
-N = 10 
-K = 2
-Output:
-14
-Explanation:
-Binary representation of the given number 10 is: 1 0 1 0, number of bits in the binary reprsentation is 4. Thus 2nd bit from right is 0. The number after changing 
-this bit to 1 is: 14(1 1 1 0).
-
-Constraints:
-1 <= N <= 10^9
-0 <= K < X, where X is the number of bits in the binary representation of N.
-
 Approaches: 
 
 Method 1: Loop through all bits in an integer, check if a bit is set and if it is then increment the set bit count.
