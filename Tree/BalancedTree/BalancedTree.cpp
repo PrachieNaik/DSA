@@ -1,11 +1,13 @@
 /*
 
-Problem statement: Given a binary tree, find if it is height balanced or not. A tree is height balanced if difference between heights of left and right subtrees is not more than one for all nodes of tree. 
+Problem statement: Given a binary tree, find if it is height balanced or not. A tree is height balanced if difference between heights of left and right subtrees is
+not more than one for all nodes of tree. 
 
 Constraints:
 1<= N <= 104
 
-Approach: To check if a tree is height-balanced, get the height of left and right subtrees. Return true if difference between heights is not more than 1 and left and right subtrees are balanced, otherwise return false. Calculate the height in the same recursion rather than calling a height() function separately. 
+Approach: To check if a tree is height-balanced, get the height of left and right subtrees. Return true if difference between heights is not more than 1 and left 
+and right subtrees are balanced, otherwise return false. Calculate the height in the same recursion rather than calling a height() function separately. 
      
 Time complexity – O(n)  
 
