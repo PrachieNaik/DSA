@@ -18,7 +18,8 @@ Method 1: Recursion. For the recursive approach we will consider two cases.
     
     Complexity Analysis: The above solution may try all subsets of given set in worst case. Therefore time complexity of the above solution is exponential. 
     
-Method 2: we will create a 2D array of size (arr.size() + 1) * (target + 1) of type boolean. The state DP[i][j] will be true if there exists a subset of elements from A[0….i] with sum value = ‘j’. The approach for the problem is: 
+Method 2: we will create a 2D array of size (arr.size() + 1) * (target + 1) of type boolean. The state DP[i][j] will be true if there exists a subset of elements
+from A[0….i] with sum value = ‘j’. The approach for the problem is: 
 
         if (A[i] > j)
         DP[i][j] = DP[i-1][j]
@@ -26,7 +27,8 @@ Method 2: we will create a 2D array of size (arr.size() + 1) * (target + 1) of t
         DP[i][j] = DP[i-1][j] OR DP[i-1][j-A[i]]
         
         This means that if current element has value greater than ‘current sum value’ we will copy the answer for previous cases
-        And if the current sum value is greater than the ‘ith’ element we will see if any of previous states have already experienced the sum=’j’ OR any previous states experienced a value ‘j – A[i]’ which will solve our purpose.
+        And if the current sum value is greater than the ‘ith’ element we will see if any of previous states have already experienced the sum=’j’ OR any previous 
+        states experienced a value ‘j – A[i]’ which will solve our purpose.
         
         Complexity Analysis: 
 
