@@ -1,9 +1,11 @@
 /**
-Given a sorted array of positive integers. WAP to rearrange  the array elements alternatively i.e first element should be max value, second should be min value, third should be second max, fourth should be second min and so on.
+Given a sorted array of positive integers. WAP to rearrange the array elements alternatively i.e first element should be max value, second should be min value, 
+third should be second max, fourth should be second min and so on.
 
 Method 1: The idea is to use multiplication and modular trick to store two elements at an index.
 How does expression “arr[i] += arr[max_index] % max_element * max_element” work ?
-The purpose of this expression is to store two elements at index arr[i]. arr[max_index] is stored as multiplier and “arr[i]” is stored as remainder. For example in {1 2 3 4 5 6 7 8 9}, max_element is 10 and we store 91 at index 0. With 91, we can get original element as 91%10 and new element as 91/10.
+The purpose of this expression is to store two elements at index arr[i]. arr[max_index] is stored as multiplier and “arr[i]” is stored as remainder. For example in
+{1 2 3 4 5 6 7 8 9}, max_element is 10 and we store 91 at index 0. With 91, we can get original element as 91%10 and new element as 91/10.
 
 **/
 
