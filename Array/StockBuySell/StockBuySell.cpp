@@ -1,6 +1,7 @@
 /*
 
-The cost of stock on each day is given in an array A[] of size N. Find all the days on which you buy and sell the stock so that in between those days your profit is maximum.
+The cost of stock on each day is given in an array A[] of size N. Find all the days on which you buy and sell the stock so that in between those days your profit
+is maximum.
 
 Assumption: You can buy and sell as many times as you want.
 
@@ -10,12 +11,9 @@ Method:
 3. Update the solution (Increment count of buy sell pairs)
 4. Repeat the above steps if end is not reached.
 
-
 Time Complexity: O(n), Space Complexity: O(1)
 
 */
-
-
 
 #include <bits/stdc++.h>
 using namespace std;
