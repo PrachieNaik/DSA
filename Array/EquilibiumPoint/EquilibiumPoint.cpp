@@ -1,7 +1,10 @@
 /**
-Given an array A of N positive numbers. WAP to find the first Equilibium Point in the array. Equilibrium Point in an array is a position such that the sum of elements before it is equal to the sum of elements after it.
 
-The idea is to get the total sum of the array first. Then Iterate through the array and keep updating the left sum which is initialized as zero. In the loop, we can get the right sum by subtracting the elements one by one. 
+Given an array A of N positive numbers. WAP to find the first Equilibium Point in the array. Equilibrium Point in an array is a position such that the sum of 
+elements before it is equal to the sum of elements after it.
+
+The idea is to get the total sum of the array first. Then Iterate through the array and keep updating the left sum which is initialized as zero. In the loop, we 
+can get the right sum by subtracting the elements one by one. 
 
 **/
 
