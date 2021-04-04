@@ -11,7 +11,8 @@ The two parts are {1, 5, 5} and {11}.
 
 Keywords: Choice, Subset sum
 
-Approach: Find the sum of all element in the array. If the sum is odd, we can't divide the array in two parts with same sum. If the sum is even, divide it by two and then try to find subset with that sum. Problem is reduced to subset sum.
+Approach: Find the sum of all element in the array. If the sum is odd, we can't divide the array in two parts with same sum. If the sum is even, divide it by two 
+and then try to find subset with that sum. Problem is reduced to subset sum.
 
 Time complexity:  O(n * sum)
 Space complexity: O(n)
