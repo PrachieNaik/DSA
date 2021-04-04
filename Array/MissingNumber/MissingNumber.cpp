@@ -3,12 +3,12 @@ WAP to find the Missing Number in array.
 
 Assuptions: Only positive numbers, Unsorted array
 
-
-Method 1: The length of the array is n-1. So the sum of all n elements, i.e sum of numbers from 1 to n can be calculated using the formula n*(n+1)/2. Now find the sum of all the elements in the array and subtract it from the sum of first n natural numbers, it will be the value of the missing element. However, there can be overflow if n is large. In order to avoid integer overflow, pick one number from known numbers and subtract one number from given numbers. This way there won’t have Integer Overflow ever.
+Method 1: The length of the array is n-1. So the sum of all n elements, i.e sum of numbers from 1 to n can be calculated using the formula n*(n+1)/2. Now find the
+sum of all the elements in the array and subtract it from the sum of first n natural numbers, it will be the value of the missing element. However, there can be 
+overflow if n is large. In order to avoid integer overflow, pick one number from known numbers and subtract one number from given numbers. This way there won’t 
+have Integer Overflow ever.
 
 **/
-
-
 
 #include <bits/stdc++.h>
 using namespace std;
