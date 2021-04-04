@@ -1,31 +1,23 @@
 /**
+
 WAP to find maximum and minimum of an array using minimum number of comparisons.
-
-
 
 Method 1: Simple linear search
 In this method, the total number of comparisons is 1 + 2(n-2) in the worst case and 1 + n – 2 in the best case. 
 Worst case: elements are sorted in descending order 
 Best case: elements are sorted in ascending order.
 
-
-
 Method 2: Divide the array into two parts and compare the maximums and minimums of the two parts to get the maximum and the minimum of the whole array.
 Number of comparisons T(n) = T(floor(n/2)) + T(ceil(n/2)) + 2  , T(2) = 1, T(1) = 0
 This approach does 3n/2 -2 comparisons if n is a power of 2. And it does more than 3n/2 -2 comparisons if n is not a power of 2.
 
-
-
 METHOD 3: Compare in Pairs
 If n is odd then initialize min and max as first element. 
 If n is even then initialize min and max as minimum and maximum of the first two elements respectively. 
-For rest of the elements, pick them in pairs and compare their 
-maximum and minimum with max and min respectively. 
+For rest of the elements, pick them in pairs and compare their maximum and minimum with max and min respectively. 
 Number of comparisions:
 If n is odd: 3*(n-1)/2  
-If n is even: 1 Initial comparison for initializing min and max, 
-and 3(n-2)/2 comparisons for rest of the elements  =  1 + 3*(n-2)/2 = 3n/2-2
-
+If n is even: 1 Initial comparison for initializing min and max, and 3(n-2)/2 comparisons for rest of the elements  =  1 + 3*(n-2)/2 = 3n/2-2
 
 **/
 
