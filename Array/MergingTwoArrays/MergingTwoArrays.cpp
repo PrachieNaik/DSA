@@ -1,17 +1,15 @@
 /**
 Given two sorted arrays, WAP to merge them.
 
-Method 1: We will traverse the first array and compare it with the first element of the second array. If the first element of the second array is smaller than the first array then we will swap and then sort the second array. 
+Method 1: We will traverse the first array and compare it with the first element of the second array. If the first element of the second array is smaller than the 
+first array then we will swap and then sort the second array. 
 Time Complexity: O(n*m). Space Complexity: O(1)
 
-
-
-Method 2: We start comparing elements that are far from each other rather than adjacent. For every pass, we calculate the gap and compare the elements towards the right of the gap. Every pass, the gap reduces to the ceiling value of dividing by 2.
+Method 2: We start comparing elements that are far from each other rather than adjacent. For every pass, we calculate the gap and compare the elements towards the
+right of the gap. Every pass, the gap reduces to the ceiling value of dividing by 2.
 Time Complexity: O((n+m)*log(n+m)). Space Complexity: O(1)
 
 **/
-
-
 
 #include <bits/stdc++.h>
 using namespace std;
