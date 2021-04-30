@@ -30,6 +30,23 @@ minimum and maximum elements in it, i.e. it takes constant time to find the maxi
        b. Perform heapify.
        c. Print the root of the Heap.
     
+    vector <int> max_of_subarrays(int *arr, int n, int k)
+    {
+        priority_queue<pair<int,int>> pq;
+        vector<int> ans;
+        for(int i = 0; i < k - 1;i++) {
+            pq.push({arr[i],i});
+        }
+        for(int i = k - 1; i < n;i++){
+            pq.push({arr[i],i});
+            while(!pq.empty() && pq.top().second <= i-k) {
+                pq.pop();
+            }
+            ans.push_back(pq.top().first);
+        }
+        return ans;
+    }
+    
     Complexity Analysis: 
 
     Time Complexity: O(n * k). 
