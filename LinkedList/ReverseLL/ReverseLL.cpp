@@ -22,6 +22,21 @@ Recursive:
     2) Call reverse for the rest of the linked list.
     3) Link rest to first.
     4) Fix head pointer
+    
+    Node* reverse(Node* node)
+    {
+        if (node == NULL)
+            return NULL;
+        if (node->next == NULL) {
+            head = node;
+            return node;
+        }
+        Node* node1 = reverse(node->next);
+        node1->next = node;
+        node->next = NULL;
+        return node;
+    }
+    
     Time Complexity: O(n) 
     Space Complexity: O(1)
 
