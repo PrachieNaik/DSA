@@ -16,9 +16,12 @@ Constraints:
 
 Approach: When we drop an egg from a floor x, there can be two cases (1) The egg breaks (2) The egg doesn’t break.
 
-    If the egg breaks after dropping from ‘xth’ floor, then we only need to check for floors lower than ‘x’ with remaining eggs as some floor should exist lower than ‘x’ in which egg would not break; so the problem reduces to x-1 floors and n-1 eggs.
-    If the egg doesn’t break after dropping from the ‘xth’ floor, then we only need to check for floors higher than ‘x’; so the problem reduces to ‘k-x’ floors and n eggs.
-    Since we need to minimize the number of trials in worst case, we take the maximum of two cases. We consider the max of above two cases for every floor and choose the floor which yields minimum number of trials.
+    If the egg breaks after dropping from ‘xth’ floor, then we only need to check for floors lower than ‘x’ with remaining eggs as some floor should exist 
+    lower than ‘x’ in which egg would not break; so the problem reduces to x-1 floors and n-1 eggs.
+    If the egg doesn’t break after dropping from the ‘xth’ floor, then we only need to check for floors higher than ‘x’; so the problem reduces to ‘k-x’ floors
+    and n eggs.
+    Since we need to minimize the number of trials in worst case, we take the maximum of two cases. We consider the max of above two cases for every floor and 
+    choose the floor which yields minimum number of trials.
 
 Complexity Analysis:
 
