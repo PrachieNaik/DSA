@@ -22,41 +22,31 @@ An Efficient solution based on tree serialization and hashing. The idea is to se
 serialized tree (which is not a leaf) already existing in hash-table, we return true. 
 
 */
-const char MARKER = '$';
-unordered_set<string> subtrees;
  
 // This function returns empty string if tree
-// contains a duplicate subtree of size 2 or more.
-string dupSubUtil(Node *root)
+string inorder(Node* root,unordered_map <string,int> &mp,int &flag)
 {
-    string s = "";
- 
-    // If current node is NULL, return marker
-    if (root == NULL)
-        return s + MARKER;
- 
-    // If left subtree has a duplicate subtree.
-    string lStr = dupSubUtil(root->left);
-    if (lStr.compare(s) == 0)
-    return s;
- 
-    // Do same for right subtree
-    string rStr = dupSubUtil(root->right);
-    if (rStr.compare(s) == 0)
-    return s;
- 
-    // Serialize current subtree
-    s = s + root->key + lStr + rStr;
- 
-    // If current subtree already exists in hash
-    // table. [Note that size of a serialized tree
-    // with single node is 3 as it has two marker
-    // nodes.
-    if (s.length() > 3 &&
-        subtrees.find(s) != subtrees.end())
-    return "";
- 
-    subtrees.insert(s);
- 
-    return s;
+	if(root==NULL)
+	return "";
+	
+	string s = "(";
+	s = s + inorder(root->left,mp,flag);
+	s = s + to_string(root->data);
+	s = s + inorder(root->right,mp,flag);
+	s = s + ")";
+    
+  if(mp[s] == 1 && s.length() >= 5)
+  {
+    flag = 1;
+	}
+	mp[s]++;
+	
+	return s;
+}
+bool dupSub(Node *root)
+{
+    unordered_map <string,int> mp;
+	int flag = 0;
+	inorder(root,mp,flag);
+	return flag;
 }
