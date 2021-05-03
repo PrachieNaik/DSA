@@ -1,12 +1,14 @@
 /*
 
-Problem statement: Given a string str, a partitioning of the string is a palindrome partitioning if every sub-string of the partition is a palindrome. Determine the fewest cuts needed for palindrome partitioning of given string.
+Problem statement: Given a string str, a partitioning of the string is a palindrome partitioning if every sub-string of the partition is a palindrome. 
+Determine the fewest cuts needed for palindrome partitioning of given string.
 
 Input: str = "ababbbabbababa"
 Output: 3
 Explaination: After 3 partitioning substrings are "a", "babbbab", "b", "ababa".
 
-Approch: This problem is a variation of Matrix Chain Multiplication problem. If the string is a palindrome, then we simply return 0. Else, like the Matrix Chain Multiplication problem, we try making cuts at all possible places, recursively calculate the cost for each cut and return the minimum value. 
+Approch: This problem is a variation of Matrix Chain Multiplication problem. If the string is a palindrome, then we simply return 0. Else, like the Matrix 
+    Chain Multiplication problem, we try making cuts at all possible places, recursively calculate the cost for each cut and return the minimum value. 
     Let the given string be str and minPalPartion() be the function that returns the fewest cuts needed for palindrome partitioning. 
 
     // i is the starting index and j is the ending index. i must be passed as 0 and j as n-1
