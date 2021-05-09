@@ -49,7 +49,8 @@ Problem statement: Given two strings S1 and S2 of equal length, the task is to d
     “caebd” is not a scrambled form of “abcde”
 
 Approch: n order to solve this problem, we are using Divide and Conquer approach. 
-    Given two strings of equal length (say n+1), S1[0…n] and S2[0…n]. If S2 is a scrambled form of S1, then there must exist an index i such that at least one of the following conditions is true: 
+    Given two strings of equal length (say n+1), S1[0…n] and S2[0…n]. If S2 is a scrambled form of S1, then there must exist an index i such that at 
+    least one of the following conditions is true: 
      
     S2[0…i] is a scrambled string of S1[0…i] and S2[i+1…n] is a scrambled string of S1[i+1…n].
     S2[0…i] is a scrambled string of S1[n-i…n] and S2[i+1…n] is a scrambled string of S1[0…n-i-1].
