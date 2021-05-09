@@ -12,9 +12,12 @@ Constraints:
 1<=n, m<=1000
 
 Approch: 1) Find Longest Common Subsequence (lcs) of two given strings. For example, lcs of “geek” and “eke” is “ek”. 
-    2) Insert non-lcs characters (in their original order in strings) to the lcs found above, and return the result. So “ek” becomes “geeke” which is shortest common supersequence.
+    2) Insert non-lcs characters (in their original order in strings) to the lcs found above, and return the result. So “ek” becomes “geeke” which is shortest 
+    common supersequence.
     How does this work? 
-    We need to find a string that has both strings as subsequences and is shortest such string. If both strings have all characters different, then result is sum of lengths of two given strings. If there are common characters, then we don’t want them multiple times as the task is to minimize length. Therefore, we fist find the longest common subsequence, take one occurrence of this subsequence and add extra characters. 
+    We need to find a string that has both strings as subsequences and is shortest such string. If both strings have all characters different, then result is sum 
+    of lengths of two given strings. If there are common characters, then we don’t want them multiple times as the task is to minimize length. Therefore, we first
+    find the longest common subsequence, take one occurrence of this subsequence and add extra characters. 
 
     Length of the shortest supersequence  = (Sum of lengths of given two strings) - (Length of LCS of two given strings) 
 
