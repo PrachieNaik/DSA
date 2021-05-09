@@ -1,6 +1,7 @@
 /*
 
-Problem statement: Given a string str, a partitioning of the string is a palindrome partitioning if every sub-string of the partition is a palindrome. Determine the fewest cuts needed for palindrome partitioning of given string.
+Problem statement: Given a string str, a partitioning of the string is a palindrome partitioning if every sub-string of the partition is a palindrome.
+Determine the fewest cuts needed for palindrome partitioning of given string.
 
 Input: str = "ababbbabbababa"
 Output: 3
