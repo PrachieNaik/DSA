@@ -1,6 +1,7 @@
 /*
 
-Problem statement: Given a string of S as input. Your task is to write a program to remove or delete minimum number of characters from the string so that the resultant string is palindrome.
+Problem statement: Given a string of S as input. Your task is to write a program to remove or delete minimum number of characters from the string so that the 
+resultant string is palindrome.
 
 Note: The order of characters in the string should be maintained.
 
@@ -11,7 +12,8 @@ Constraints:
 1<=T<=100
 1<=length(S)<=10000
 
-Approch: Reverse the given string and store it in another string. Apply lcs on both of these strings. We will get the maximum possible length of palindromic sequence present in the string. We will get the required number of deletion by subtracting this value from length of string.
+Approch: Reverse the given string and store it in another string. Apply lcs on both of these strings. We will get the maximum possible length of palindromic
+sequence present in the string. We will get the required number of deletion by subtracting this value from length of string.
 
 Node: This problem can also be asked as minimum number of insertion, the answer or code will not change
 */
