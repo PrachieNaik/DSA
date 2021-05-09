@@ -1,7 +1,8 @@
 /*
 
 Problem statement: Given a set of integers, the task is to divide it into two sets S1 and S2 such that the absolute difference between their sums is minimum. 
-    If there is a set S with n elements, then if we assume Subset1 has m elements, Subset2 must have n-m elements and the value of abs(sum(Subset1) – sum(Subset2)) should be minimum.
+    If there is a set S with n elements, then if we assume Subset1 has m elements, Subset2 must have n-m elements and the value of abs(sum(Subset1) – sum(Subset2))
+    should be minimum.
 
 Input:  arr[] = {1, 6, 11, 5} 
 Output: 1
@@ -11,11 +12,13 @@ Subset2 = {11}, sum of Subset2 = 11
 
 Keywords: Choice
 
-Approach: The problem can be solved using dynamic programming when the sum of the elements is not too big. We can create a 2D array dp[n+1][sum+1] where n is a number of elements in a given set and sum is the sum of all elements. We can construct the solution in a bottom-up manner.
+Approach: The problem can be solved using dynamic programming when the sum of the elements is not too big. We can create a 2D array dp[n+1][sum+1] where
+n is a number of elements in a given set and sum is the sum of all elements. We can construct the solution in a bottom-up manner.
 
     The task is to divide the set into two parts. 
     We will consider the following factors for dividing it. 
-    Let dp[n+1][sum+1] = {1 if some subset from 1st to i'th has a sum equal to j             0 otherwise}
+    Let dp[n+1][sum+1] = {1 if some subset from 1st to i'th has a sum equal to j            
+                          0 otherwise}
         
         i ranges from {1..n}
         j ranges from {0..(sum of all elements)}  
