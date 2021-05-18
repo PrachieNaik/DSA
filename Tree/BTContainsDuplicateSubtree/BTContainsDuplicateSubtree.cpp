@@ -15,7 +15,7 @@ Output : Yes
 
 Approach 1:
 A simple solution is that, we pick every node of tree and try to find is any sub-tree of given tree is present in tree which is identical with that sub-tree. 
-Here we can use below post to find if a subtree is present anywhere else in tree. 
+Use the same logic as "Check if a binary tree is subtree of another binary tree" to check if a subtree is present anywhere else in tree. 
 
 Approach 2:
 An Efficient solution based on tree serialization and hashing. The idea is to serialize subtrees as strings and store the strings in hash table. Once we find a 
@@ -35,12 +35,12 @@ string inorder(Node* root,unordered_map <string,int> &mp,int &flag)
 	s = s + inorder(root->right,mp,flag);
 	s = s + ")";
     
-  if(mp[s] == 1 && s.length() >= 5)
-  {
-    flag = 1;
+	if(mp[s] == 1 && s.length() >= 5)
+	{
+		flag = 1;
 	}
 	mp[s]++;
-	
+
 	return s;
 }
 bool dupSub(Node *root)
