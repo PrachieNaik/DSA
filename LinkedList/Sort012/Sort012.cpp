@@ -1,12 +1,15 @@
 /*
 
-Problem statement: Given a linked list of N nodes where nodes can contain values 0s, 1s, and 2s only. The task is to segregate 0s, 1s, and 2s linked list such that all zeros segregate to head side, 2s at the end of the linked list, and 1s in the mid of 0s and 2s.
+Problem statement: Given a linked list of N nodes where nodes can contain values 0s, 1s, and 2s only. The task is to segregate 0s, 1s, and 2s linked list
+such that all zeros segregate to head side, 2s at the end of the linked list, and 1s in the mid of 0s and 2s.
 
 Constraints: 1 <= N <= 10^3
 
 Approaches:
 
-Method 1: Iterate through the linked list. Maintain 3 pointers named zero, one and two to point to current ending nodes of linked lists containing 0, 1, and 2 respectively. For every traversed node, we attach it to the end of its corresponding list. Finally, we link all three lists. To avoid many null checks, we use three dummy pointers zeroD, oneD and twoD that work as dummy headers of three lists.
+Method 1: Iterate through the linked list. Maintain 3 pointers named zero, one and two to point to current ending nodes of linked lists containing 
+0, 1, and 2 respectively. For every traversed node, we attach it to the end of its corresponding list. Finally, we link all three lists. To avoid many 
+null checks, we use three dummy pointers zeroD, oneD and twoD that work as dummy headers of three lists.
 	Time Complexity: O(N)
 	Space Complexity: O(1)
 
