@@ -3,11 +3,14 @@ Given an unsorted array of nonnegative integers, WAP to find a continuous subarr
 
 
 
-Method 1: A simple solution is to consider all subarrays one by one and check the sum of every subarray. Run two loops: the outer loop picks a starting point I and the inner loop tries all subarrays starting from i.
+Method 1: A simple solution is to consider all subarrays one by one and check the sum of every subarray. Run two loops: the outer loop picks a starting 
+point I and the inner loop tries all subarrays starting from i.
 Time Complexity: O(n^2) in worst case. Space Complexity: O(1).
 
 
-Method 2: If all the elements of the array are positive. If a subarray has sum greater than the given sum then there is no possibility that adding elements to the current subarray the sum will be x (given sum). Idea is to use a similar approach to a sliding window. Start with an empty subarray, add elements to the subarray until the sum is less than x. If the sum is greater than x, remove elements from the start of the current subarray.
+Method 2: If all the elements of the array are positive. If a subarray has sum greater than the given sum then there is no possibility that adding elements
+to the current subarray the sum will be x (given sum). Idea is to use a similar approach to a sliding window. Start with an empty subarray, add elements to
+the subarray until the sum is less than x. If the sum is greater than x, remove elements from the start of the current subarray.
 
 **/
 
