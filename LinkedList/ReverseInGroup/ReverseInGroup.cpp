@@ -6,7 +6,7 @@ Sample Input: 1->2->2->4->5->6->7->8 & K = 4
 
 Sample Output: 4 2 2 1 8 7 6 5 
 
-Constraints: 1 <= N <= 103, 1 <= k <= N
+Constraints: 1 <= N <= 10^3, 1 <= k <= N
 
 Assumptions: Data of the node will be a positive integer.
 
@@ -18,12 +18,14 @@ No input case: NA
 Approaches:
 
 Method 1:  
-Reverse the first sub-list of size k. While reversing keep track of the next node and previous node. Let the pointer to the next node be next and pointer to the previous node be prev.
+Reverse the first sub-list of size k. While reversing keep track of the next node and previous node. Let the pointer to the next node be next and pointer 
+to the previous node be prev.
 Time Complexity: O(N)
 Space Complexity: O(N/K)
 
 Method 2: 
-Use a stack which will store the nodes of the given linked list. Firstly, push the k elements of the linked list in the stack. Now pop elements one by one and keep track of the previously popped node. Point the next pointer of prev node to top element of stack. Repeat this process, until NULL is reached.
+Use a stack which will store the nodes of the given linked list. Firstly, push the k elements of the linked list in the stack. Now pop elements one by one
+and keep track of the previously popped node. Point the next pointer of prev node to top element of stack. Repeat this process, until NULL is reached.
 Time Complexity: O(N)
 Space Complexity: O(K)
 
