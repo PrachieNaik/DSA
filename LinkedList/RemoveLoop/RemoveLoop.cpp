@@ -6,12 +6,16 @@ Constraints: 1 <= N <= 10^4
 
 Approaches:
 
-Brute Force: (Check one by one) We know that Floyd’s Cycle detection algorithm terminates when fast and slow pointers meet at a common point. We also know that this common point is one of the loop nodes (2 or 3 or 4 or 5 in the above diagram). Store the address of this in a pointer variable say ptr2. After that start from the head of the Linked List and check for nodes one by one if they are reachable from ptr2. Whenever we find a node that is reachable, we know that this node is the starting node of the loop in Linked List and we can get the pointer to the previous of this node.
+Brute Force: (Check one by one) We know that Floyd’s Cycle detection algorithm terminates when fast and slow pointers meet at a common point. We also
+know that this common point is one of the loop nodes (2 or 3 or 4 or 5 in the above diagram). Store the address of this in a pointer variable say ptr2. 
+After that start from the head of the Linked List and check for nodes one by one if they are reachable from ptr2. Whenever we find a node that is reachable,
+we know that this node is the starting node of the loop in Linked List and we can get the pointer to the previous of this node.
 
 	Time Complexity: O(N*C)
 	Space Complexity: O(1)
 
-Optimized: After detecting the loop, if we start slow pointer from head and move both slow and fast pointers at same speed until fast don’t meet, they would meet at the beginning of the loop.
+Optimized: After detecting the loop, if we start slow pointer from head and move both slow and fast pointers at same speed until fast don’t meet, they would
+meet at the beginning of the loop.
 
 How does this work? 
 
@@ -40,9 +44,13 @@ From above equation, we can conclude below
 
 Which means m+k is a multiple of n. 
 Thus we can write, m + k = i*n or m = i*n - k.
-Hence, distance moved by slow pointer: m, is equal to distance moved by fast pointer: i*n - k or (i-1)*n + n - k (cover the loop completely i-1 times and start from n-k).
+Hence, distance moved by slow pointer: m, is equal to distance moved by fast pointer: i*n - k or (i-1)*n + n - k (cover the loop completely i-1 times and 
+start from n-k).
 
-So if we start moving both pointers again at same speed such that one pointer (say slow) begins from head node of linked list and other pointer (say fast) begins from meeting point. When slow pointer reaches beginning of loop (has made m steps), fast pointer would have made also moved m steps as they are now moving same pace. Since m+k is a multiple of n and fast starts from k, they would meet at the beginning. Can they meet before also? No because slow pointer enters the cycle first time after m steps. 
+So if we start moving both pointers again at same speed such that one pointer (say slow) begins from head node of linked list and other pointer (say fast)
+begins from meeting point. When slow pointer reaches beginning of loop (has made m steps), fast pointer would have made also moved m steps as they are now
+moving same pace. Since m+k is a multiple of n and fast starts from k, they would meet at the beginning. Can they meet before also? No because slow pointer 
+enters the cycle first time after m steps. 
        
     Time Complexity: O(N)
     Space Complexity: O(1)
